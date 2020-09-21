@@ -22,7 +22,7 @@ class Tokenizer:
     Tokenizer
     """
 
-    INVALIDATE_CHAR = "$$invalidate_char$$"
+    INVALIDATE_CHAR = " "
 
     def __init__(self, is_remove_invalidate_char: bool = False):
         """

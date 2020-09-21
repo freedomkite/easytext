@@ -68,7 +68,7 @@ class SequenceMaxLabelIndexDecoder(LabelIndexDecoder):
                 sequence_logits=sequence_logits,
                 vocabulary=self._label_vocabulary)
 
-            sequence_label_indices = torch.tensor(sequence_label_indices, dtype=torch.long)
+            sequence_label_indices = torch.tensor(sequence_label_indices, dtype=torch.long, device=logits.device)
 
             padding = torch.full_like(sequence_mask1d,
                                       fill_value=self._label_vocabulary.padding_index,

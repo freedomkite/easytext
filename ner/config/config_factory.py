@@ -76,10 +76,13 @@ class NerConfigFactory(ConfigFactory):
         config["num_check_point_keep"] = 1
 
         config["num_epoch"] = 200
-        config["train_batch_size"] = 16
-        config["test_batch_size"] = 32
+        config["train_batch_size"] = 12
+        config["test_batch_size"] = 16
         config["model_name"] = self.model_name
         config["fine_tuning"] = True
+        config["label_vocabulary_dir"] = f"data/ner/{self.dataset_name}_{self.model_name}/vocabulary/label_vocabulary"
+        config["token_vocabulary_dir"] = f"data/ner/{self.dataset_name}_{self.model_name}/vocabulary/token_vocabulary"
+
 
         pretrained_word_embedding_file_path = "data/pretrained/glove/glove.6B.100d.txt"
 

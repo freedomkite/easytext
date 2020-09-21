@@ -35,7 +35,7 @@ class NerModelMetricAdapter(ModelMetricAdapter):
         self.span_f1_metric = SpanF1Metric(label_vocabulary)
         self.model_label_decoder = model_label_decoder
 
-    def __call__(self, model_outputs: ModelOutputs, golden_labels: Tensor) -> Tuple[Dict, ModelTargetMetric]:
+    def __call__(self, model_outputs: NerModelOutputs, golden_labels: Tensor) -> Tuple[Dict, ModelTargetMetric]:
         model_outputs: NerModelOutputs = model_outputs
 
         prediction_labels = self.model_label_decoder.decode_label_index(model_outputs=model_outputs)
