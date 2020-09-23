@@ -83,7 +83,6 @@ class NerConfigFactory(ConfigFactory):
         config["label_vocabulary_dir"] = f"data/ner/{self.dataset_name}_{self.model_name}/vocabulary/label_vocabulary"
         config["token_vocabulary_dir"] = f"data/ner/{self.dataset_name}_{self.model_name}/vocabulary/token_vocabulary"
 
-
         pretrained_word_embedding_file_path = "data/pretrained/glove/glove.6B.100d.txt"
 
         config["pretrained_word_embedding_file_path"] = os.path.join(ROOT_PATH,
