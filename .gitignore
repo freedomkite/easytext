@@ -279,7 +279,7 @@ Sessionx.vim
 
 # Temporary
 .netrwhist
-*~
+
 # Auto-generated tag files
 tags
 # Persistent undo
@@ -290,9 +290,8 @@ easytext.egg-info
 data/acsa/*
 data/easytext/*
 data/event/*
-data/ner/*
 data/dataset/*
 data/pretrained
 data/tensorboard
-ace_english_event/
 log/
+
